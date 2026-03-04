@@ -1,0 +1,75 @@
+<%- include('partials/header') %>
+
+<nav class="navbar navbar-custom navbar-expand-lg px-3 mb-4">
+  <div class="container-fluid">
+    <a href="/dashboard" class="navbar-brand fw-bold text-decoration-none">
+      <i class="bi bi-arrow-left-circle"></i> Novo Chamado
+    </a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow-sm p-4">
+        <form method="POST" action="/novo" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label class="form-label fw-bold">Título do Problema</label>
+            <input
+              name="titulo"
+              class="form-control"
+              placeholder="Ex: Erro ao acessar o sistema"
+              maxlength="120"
+              required
+            >
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-bold">Descrição Detalhada</label>
+            <textarea
+              name="descricao"
+              class="form-control"
+              rows="4"
+              placeholder="Descreva o que está acontecendo..."
+            ></textarea>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label class="form-label fw-bold">Prioridade</label>
+              <select name="prioridade" class="form-select">
+                <option value="Baixa"> Baixa</option>
+                <option value="Média"> Média</option>
+                <option value="Alta"> Alta</option>
+              </select>
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label class="form-label fw-bold">Ilha / Setor</label>
+              <select name="ilha" class="form-select" required>
+                <option value="">Selecione...</option>
+                <% for (let i = 1; i <= 10; i++) { %>
+                  <option value="Ilha <%= i %>">Ilha <%= i %></option>
+                <% } %>
+              </select>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label fw-bold">Anexar Evidência (Print/Log)</label>
+            <input type="file" name="anexo" class="form-control">
+            <div class="form-text">Tamanho máximo: 10 MB.</div>
+          </div>
+
+          <div class="d-grid">
+            <button class="btn btn-primary btn-lg fw-bold" type="submit">
+              <i class="bi bi-send"></i> Abrir Chamado
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
