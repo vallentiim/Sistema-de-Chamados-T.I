@@ -1,0 +1,28 @@
+{
+  "name": "sistema-chamados",
+  "version": "2.0.0",
+  "description": "Sistema de Service Desk com Node.js, Express, EJS e PostgreSQL.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "check": "node --check server.js && node --check src/server.js && node --check src/app.js && node --check src/controllers/auth-controller.js && node --check src/controllers/ticket-controller.js"
+  },
+  "keywords": [
+    "service-desk",
+    "nodejs",
+    "postgresql",
+    "ejs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.3.1",
+    "ejs": "^4.0.1",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "multer": "^2.0.2",
+    "pg": "^8.19.0"
+  }
+}

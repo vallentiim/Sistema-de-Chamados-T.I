@@ -1,0 +1,53 @@
+<%- include('partials/header') %>
+
+<!-- Tela de autenticação do sistema -->
+<div class="container d-flex justify-content-center align-items-center min-vh-100 py-4">
+  <div class="card p-4 shadow-sm auth-card">
+    <div class="text-center mb-4">
+      <h4 class="fw-bold text-primary mb-1">
+        <i class="bi bi-headset"></i> EMPRESA
+      </h4>
+      <p class="text-muted mb-0">Sistema de Chamados</p>
+    </div>
+
+    <!-- Exibe mensagem de erro caso o controller envie uma -->
+    <% if (erro) { %>
+      <div class="alert alert-danger" role="alert">
+        <i class="bi bi-exclamation-octagon"></i> <%= erro %>
+      </div>
+    <% } %>
+
+    <!-- Formulário de login -->
+    <form method="POST" action="/login" novalidate>
+      <div class="form-floating mb-3">
+        <input
+          type="email"
+          name="email"
+          class="form-control"
+          id="emailInput"
+          placeholder="nome@exemplo.com"
+          required
+        >
+        <label for="emailInput">E-mail</label>
+      </div>
+
+      <div class="form-floating mb-4">
+        <input
+          type="password"
+          name="senha"
+          class="form-control"
+          id="senhaInput"
+          placeholder="Senha"
+          required
+        >
+        <label for="senhaInput">Senha</label>
+      </div>
+
+      <button class="btn btn-primary w-100 py-2 fw-bold" type="submit">
+        Entrar <i class="bi bi-box-arrow-in-right"></i>
+      </button>
+    </form>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

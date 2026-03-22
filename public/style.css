@@ -1,0 +1,78 @@
+/* Estilo base de toda a aplicação */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Barra de navegação principal */
+.navbar-custom {
+  background-color: #0f172a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Garante contraste adequado nos textos da navbar */
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link,
+.navbar-custom .text-white {
+  color: #f8fafc !important;
+}
+
+/* Aparência padrão dos cards */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Limita a largura do card de login */
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Estilo base dos badges */
+.badge {
+  padding: 0.5em 0.75em;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* Cores visuais de status */
+.badge-aberto {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+.badge-andamento {
+  background-color: #f59e0b;
+  color: #fff;
+}
+
+.badge-fechado {
+  background-color: #10b981;
+  color: #fff;
+}
+
+/* Personalização da tabela principal */
+.table thead {
+  background-color: #fff;
+  color: #475569;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.table th {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+/* Efeito visual ao passar o mouse nas linhas */
+.table-hover tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* Texto pequeno usado nos cards de contadores */
+.counter-label {
+  font-size: 0.7rem;
+}

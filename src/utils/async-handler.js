@@ -1,0 +1,8 @@
+// Helper para evitar try/catch repetido em todas as rotas assíncronas.
+function asyncHandler(fn) {
+  return function asyncRouteHandler(req, res, next) {
+    Promise.resolve(fn(req, res, next)).catch(next);
+  };
+}
+
+module.exports = asyncHandler;

@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+
+<!-- Página exibida quando a rota não existe ou o usuário não tem acesso -->
+<div class="container min-vh-100 d-flex align-items-center justify-content-center py-5">
+  <div class="card p-4 p-md-5 shadow-sm text-center" style="max-width: 520px; width: 100%;">
+    <i class="bi bi-exclamation-triangle display-4 text-warning mb-3"></i>
+    <h1 class="h3 fw-bold mb-2">Página não encontrada</h1>
+    <p class="text-muted mb-4">O recurso que você tentou acessar não existe ou você não tem permissão para visualizá-lo.</p>
+    <a href="/" class="btn btn-primary">Voltar ao início</a>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
